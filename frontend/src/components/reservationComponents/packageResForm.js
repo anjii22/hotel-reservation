@@ -2,13 +2,13 @@ import { useState } from "react"
 import { useReservationContext } from "../../hooks/useReservationContext"
 
 
-const EventReservationForm = ({event, onCancel}) =>{
+const EventReservationForm = ({packages, onCancel}) =>{
     
     //const id = 
 
     const {dispatch} = useReservationContext() 
 
-    const [type, setType] = useState('Event')
+    const [type, setType] = useState('Package')
     const [uid, setUID] = useState('reception')         //set user id
     const [fname, setFname] = useState('')
     const [lname, setLname] = useState('')
@@ -45,7 +45,7 @@ const EventReservationForm = ({event, onCancel}) =>{
         }
         if(response.ok){
             //resetting
-            setType('Event')
+            setType('Package')
             setUID('reception')         // user id
             setFname('')
             setLname('')
@@ -107,8 +107,8 @@ const EventReservationForm = ({event, onCancel}) =>{
                 className={emptyFields.includes('r_h_number') ? 'error' : ''} 
             />
 
-            
-        
+           
+
             <button>Reserve</button>
             <button onClick={onCancel}>Cancel</button>
             

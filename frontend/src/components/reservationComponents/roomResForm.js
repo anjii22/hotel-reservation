@@ -15,7 +15,7 @@ const RoomReservationForm = () =>{
     const [l_date, setL_date] = useState('')
     const [r_h_type, setr_h_type] = useState('')        //[]array
     const [r_h_number, setr_h_number] = useState('')
-    const [e_function, setFunction] = useState('null')
+    const [e_p_id, setID] = useState('null')
 
     const [error, setError] = useState(null)
     const [emptyFields, setEmptyFields] = useState([]);
@@ -26,7 +26,7 @@ const RoomReservationForm = () =>{
     const handleSubmit = async(e) =>{
         e.preventDefault()
 
-        const reservation = {type, uid, fname, lname, res_stay, date, l_date, r_h_type, r_h_number, e_function}
+        const reservation = {type, uid, fname, lname, res_stay, date, l_date, r_h_type, r_h_number, e_p_id}
 
         const response = await fetch('http://localhost:8020/api/reservation', {
             method: 'POST',
@@ -55,7 +55,7 @@ const RoomReservationForm = () =>{
             setr_h_type('')
             setr_h_number('')           //[] array
             setEmptyFields([])
-            setFunction('null')
+            setID('null')
 
             console.log('Added', json)
             

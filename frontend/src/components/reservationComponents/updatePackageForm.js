@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useReservationContext } from "../../hooks/useReservationContext";
 
-const UpdateEventForm = ({ reservation, onCancel }) => {
+const UpdatePackageForm = ({ reservation, onCancel }) => {
     const { dispatch } = useReservationContext();
 
     const [fname, setFname] = useState(reservation.fname)
@@ -98,4 +98,4 @@ const UpdateEventForm = ({ reservation, onCancel }) => {
   );
 };
 
-export default UpdateEventForm;
+export default UpdatePackageForm;

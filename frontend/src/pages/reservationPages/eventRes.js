@@ -5,6 +5,7 @@ const EventReservation = () => {
         <div>
             <h2>Event reservation</h2>
             <EventResForm/>
+            {/* DISPAY EVENTS */}
         </div>
     )
 }

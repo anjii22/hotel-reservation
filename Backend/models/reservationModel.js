@@ -46,7 +46,7 @@ const reservationSchema = new Schema({
         type: Number,
     },
 
-    e_function: {
+    e_p_id: {
         type: String,
     },
     
