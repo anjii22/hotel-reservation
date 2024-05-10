@@ -155,7 +155,7 @@ const updateReservation = (async(req, res) =>{
     if(mongoose.Types.ObjectId.isValid(id))
     {
         const reservation = await Reservation.findOneAndUpdate({_id: id},{...req.body}, {returnOriginal: false})
-        console.log(reservation)
+        
         if(!reservation)
         {
             return res.status(404).json({error: "Not found!"})              //status(400) = not found error code
